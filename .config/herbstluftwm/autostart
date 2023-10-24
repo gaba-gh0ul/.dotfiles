@@ -10,7 +10,7 @@ hc emit_hook reload
 
 # xsetroot -solid '#5A8E3A'
 feh --bg-fill ~/Pictures/Wallpapers/wall
-# picom -b
+picom -b
 
 # remove all existing keybindings
 hc keyunbind --all
@@ -129,12 +129,12 @@ hc set frame_transparent_width 2
 hc set frame_gap 4
 
 hc attr theme.title_height 15
-hc attr theme.title_when always
+hc attr theme.title_when never
 hc attr theme.title_font 'Dejavu Sans:pixelsize=12'  # example using Xft
 # hc attr theme.title_font '-*-fixed-medium-r-*-*-13-*-*-*-*-*-*-*'
 hc attr theme.title_depth 3  # space below the title's baseline
 # hc attr theme.active.color '#345F0Cef'
-hc attr theme.active.color '#e78a4e'
+hc attr theme.active.color '#585b70'
 hc attr theme.title_color '#ffffff'
 hc attr theme.normal.color '#323232dd'
 hc attr theme.urgent.color '#7811A1dd'
@@ -150,7 +150,7 @@ hc attr theme.floating.border_width 4
 hc attr theme.floating.outer_width 1
 hc attr theme.floating.outer_color black
 # hc attr theme.active.inner_color '#789161'
-hc attr theme.active.inner_color '#3c3836'
+hc attr theme.active.inner_color '#313244'
 hc attr theme.urgent.inner_color '#9A65B0'
 hc attr theme.normal.inner_color '#606060'
 # copy inner color to outer_color

@@ -24,6 +24,7 @@ x=${geometry[0]}
 y=${geometry[1]}
 panel_width=${geometry[2]}
 panel_height=20
+#font="-*-fixed-medium-*-*-*-14-*-*-*-*-*-*-*"
 font="-*-fixed-medium-*-*-*-14-*-*-*-*-*-*-*"
 # extract colors from hlwm and omit alpha-value
 bgcolor=$(hc get frame_border_normal_color|sed 's,^\(\#[0-9a-f]\{6\}\)[0-9a-f]\{2\}$,\1,')
@@ -80,7 +81,7 @@ hc pad $monitor $panel_height
     while true ; do
         # output is checked once a second, but a "date" event is only
         # generated if the output changed compared to the previous run.
-        printf 'date\t^fg(#efefef)%(%H:%M)T^fg(#909090), %(%Y-%m)T-^fg(#efefef)%(%d)T\n'
+        printf 'date\t^fg(#efefef)%(%l:%M)T^fg(#909090), %(%Y-%m)T-^fg(#efefef)%(%d)T\n'
         sleep 1 || break
     done > >(uniq_linebuffered) &
     childpid=$!
